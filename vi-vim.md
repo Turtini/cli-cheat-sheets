@@ -80,6 +80,8 @@ V       # visual line selection
 
 <<      # unindent line
 
+>>      # unindent line
+
 
 ## YAML Survival Rules
 
