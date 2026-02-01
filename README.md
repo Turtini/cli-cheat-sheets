@@ -16,14 +16,17 @@ They are intentionally concise and opinionated, favoring clarity over completene
 
 ## Contents
 
+* **Linux CLI Fundamentals**
+  Core Linux command-line commands for navigation, file operations, processes, networking, and operator safety.
+
 * **OpenShift (`oc`) Cheat Sheet**
-  Core commands for login, context, resource inspection, rollout management, and troubleshooting.
+  Core commands for login, context, resource inspection, rollout management, and troubleshooting in OpenShift environments.
 
 * **VI / VIM Essentials**
-  The minimum you need to safely edit files and YAML on any system.
+  The minimum commands needed to safely edit files and YAML under pressure on any system.
 
 * **YAML Basics for Operators**
-  Structure, indentation rules, and small examples relevant to OpenShift and Kubernetes-style manifests.
+  Structure, indentation rules, and real-world examples for Kubernetes and OpenShift manifests.
 
 ---
 
@@ -78,9 +81,3 @@ This project is licensed under the Apache License 2.0. See the `LICENSE` file fo
 ---
 
 Maintained by **Turtini**.
-
----
-
-## Next: OpenShift (`oc`) Cheat Sheet
-
-See `openshift-oc.md` for core OpenShift CLI commands covering login, context, resource inspection, rollout management, and troubleshooting.
