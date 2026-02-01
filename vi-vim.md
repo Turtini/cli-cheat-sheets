@@ -74,15 +74,6 @@ v       # visual (character selection)
 V       # visual line selection
 
 
-## Indentation (YAML-safe)
-
->>      # indent line
-
-<<      # unindent line
-
->>      # unindent line
-
-
 ## YAML Survival Rules
 
  ✔ Use spaces only (no tabs)
