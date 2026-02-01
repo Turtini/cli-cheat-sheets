@@ -5,8 +5,6 @@
 Practical OpenShift CLI commands for day-to-day operator workflows.
 Designed for speed, clarity, and safe execution in live environments.
 
-> Tip: This cheat sheet is kept in a single code block to render cleanly across GitHub UI and docs viewers.
-
 
 ---
 
