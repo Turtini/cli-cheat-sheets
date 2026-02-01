@@ -78,3 +78,9 @@ This project is licensed under the Apache License 2.0. See the `LICENSE` file fo
 ---
 
 Maintained by **Turtini**.
+
+---
+
+## Next: OpenShift (`oc`) Cheat Sheet
+
+See `openshift-oc.md` for core OpenShift CLI commands covering login, context, resource inspection, rollout management, and troubleshooting.
