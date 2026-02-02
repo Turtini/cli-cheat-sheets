@@ -1,6 +1,5 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
-\usepackage{lastpage}
 \usepackage{xcolor}
 \usepackage{geometry}
 \usepackage{titling}
@@ -9,17 +8,16 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-
 \setlength{\headheight}{18pt}
 
 % Header
 \lhead{\includegraphics[height=14pt]{assets/logo.png}}
-\chead{\small \textcolor{gray}{\nouppercase{\leftmark}}}
-\rhead{\small \textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
+\chead{\small\textcolor{gray}{CLI Cheat Sheets}}
+\rhead{\small\textcolor{gray}{Page \thepage}}
 
 % Footer
-\lfoot{\small \textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
-\rfoot{\small \textcolor{gray}{\today}}
+\lfoot{\small\textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
+\rfoot{\small\textcolor{gray}{\today}}
 
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0pt}
