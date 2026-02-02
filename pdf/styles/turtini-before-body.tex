@@ -1,0 +1,7 @@
+% pdf/styles/turtini-before-body.tex
+\pagestyle{turtini}
+\thispagestyle{turtini}
+
+% Pandoc/LaTeX often uses 'plain' for title pages and sometimes throughout.
+% Force plain pages to use our style too.
+\fancypagestyle{plain}{\pagestyle{turtini}}
