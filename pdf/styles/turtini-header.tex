@@ -2,30 +2,28 @@
 \usepackage{fancyhdr}
 \usepackage{xcolor}
 \usepackage{geometry}
-\usepackage{titling}
 
 \geometry{margin=1in}
 
+% Force fancy everywhere
 \pagestyle{fancy}
 \fancyhf{}
+
 \setlength{\headheight}{18pt}
 
 % Header
-\lhead{\includegraphics[height=14pt]{assets/logo.png}}
-\chead{\small\textcolor{gray}{CLI Cheat Sheets}}
-\rhead{\small\textcolor{gray}{Page \thepage}}
+\fancyhead[L]{\includegraphics[height=14pt]{assets/logo.png}}
+\fancyhead[C]{\small\textcolor{gray}{CLI Cheat Sheets}}
+\fancyhead[R]{\small\textcolor{gray}{Page \thepage}}
 
 % Footer
-\lfoot{\small\textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
-\rfoot{\small\textcolor{gray}{\today}}
+\fancyfoot[L]{\small\textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
+\fancyfoot[R]{\small\textcolor{gray}{\today}}
 
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Title page logo
-\pretitle{\begin{center}\includegraphics[height=32pt]{assets/logo.png}\par\vspace{12pt}\LARGE}
-\posttitle{\par\end{center}\vspace{8pt}}
-
+% Force Pandoc title page to use fancy
 \fancypagestyle{plain}{
   \pagestyle{fancy}
 }
