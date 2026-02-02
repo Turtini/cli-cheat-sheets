@@ -1,0 +1,84 @@
+name: Build and publish PDFs
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - "**/*.md"
+      - "pdf/styles/**"
+      - "assets/**"
+      - ".github/workflows/build-and-publish-pdfs.yml"
+  workflow_dispatch: {}
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source repo (cli-cheat-sheets)
+        uses: actions/checkout@v4
+
+      - name: Install Pandoc + XeLaTeX (TeX Live)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            pandoc \
+            texlive-xetex \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            rsync
+
+      - name: Build PDFs
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mkdir -p dist/pdfs
+
+          # Build every top-level *.md (adjust if you keep them elsewhere)
+          for md in *.md; do
+            [ -f "$md" ] || continue
+            base="${md%.md}"
+
+            pandoc "$md" \
+              -o "dist/pdfs/${base}.pdf" \
+              --pdf-engine=xelatex \
+              --resource-path=".:assets:pdf/styles" \
+              --include-in-header="pdf/styles/turtini-header.tex" \
+              --include-after-body="pdf/styles/force-fancy.tex" \
+              -V mainfont="DejaVu Sans" \
+              -V monofont="DejaVu Sans Mono" \
+              -V fontsize=11pt
+          done
+
+          ls -la dist/pdfs
+
+      - name: Checkout target repo (turtini.github.io)
+        uses: actions/checkout@v4
+        with:
+          repository: Turtini/turtini.github.io
+          token: ${{ secrets.TURTINI_PAGES_TOKEN }}
+          path: site
+
+      - name: Copy PDFs into site repo
+        run: |
+          set -euo pipefail
+          mkdir -p site/assets/cli-cheat-sheets
+          rsync -av --delete dist/pdfs/ site/assets/cli-cheat-sheets/
+
+      - name: Commit & push to turtini.github.io
+        run: |
+          set -euo pipefail
+          cd site
+          git config user.name "turtini-bot"
+          git config user.email "actions@github.com"
+
+          # Only commit if there are changes
+          if git status --porcelain | grep -q .; then
+            git add assets/cli-cheat-sheets
+            git commit -m "Publish updated PDFs from cli-cheat-sheets"
+            git push
+          else
+            echo "No changes to publish."
+          fi
