@@ -1,34 +1,29 @@
-% pdf/styles/turtini-header.tex
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{xcolor}
+\usepackage{geometry}
+\usepackage{titling}
 
-% --- Page geometry (Pandoc can also set this; keeping here is fine) ---
-\usepackage[margin=1in]{geometry}
+\geometry{margin=1in}
 
-% --- Header / Footer ---
 \pagestyle{fancy}
-\fancyhf{} % clear all
+\fancyhf{}
 
-% Adjust these to taste
 \setlength{\headheight}{18pt}
-\setlength{\footskip}{18pt}
 
-% Logo in header (left)
-% Update the path to wherever you store the logo in the repo.
-\lhead{\includegraphics[height=12pt]{assets/logo.png}}
-
-% Document title (center)
+% Header
+\lhead{\includegraphics[height=14pt]{assets/logo.png}}
 \chead{\small \textcolor{gray}{\nouppercase{\leftmark}}}
-
-% Page numbers (right)
 \rhead{\small \textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
 
-% Footer: repo link (left) + date (right)
+% Footer
 \lfoot{\small \textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
 \rfoot{\small \textcolor{gray}{\today}}
 
-% Remove header rule if you want it cleaner
-\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0pt}
+
+% Title page logo
+\pretitle{\begin{center}\includegraphics[height=32pt]{assets/logo.png}\par\vspace{12pt}\LARGE}
+\posttitle{\par\end{center}\vspace{8pt}}
