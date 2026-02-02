@@ -84,4 +84,4 @@ oc get events --sort-by=.lastTimestamp
 oc adm top pods
 oc adm top nodes
 ```
-# oc adm top nodes requires elevated permissions
+oc adm top nodes requires elevated permissions
