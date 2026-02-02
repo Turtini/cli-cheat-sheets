@@ -1,0 +1,34 @@
+% pdf/styles/turtini-header.tex
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{xcolor}
+
+% --- Page geometry (Pandoc can also set this; keeping here is fine) ---
+\usepackage[margin=1in]{geometry}
+
+% --- Header / Footer ---
+\pagestyle{fancy}
+\fancyhf{} % clear all
+
+% Adjust these to taste
+\setlength{\headheight}{18pt}
+\setlength{\footskip}{18pt}
+
+% Logo in header (left)
+% Update the path to wherever you store the logo in the repo.
+\lhead{\includegraphics[height=12pt]{assets/logo.png}}
+
+% Document title (center)
+\chead{\small \textcolor{gray}{\nouppercase{\leftmark}}}
+
+% Page numbers (right)
+\rhead{\small \textcolor{gray}{Page \thepage\ of \pageref{LastPage}}}
+
+% Footer: repo link (left) + date (right)
+\lfoot{\small \textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
+\rfoot{\small \textcolor{gray}{\today}}
+
+% Remove header rule if you want it cleaner
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0pt}
