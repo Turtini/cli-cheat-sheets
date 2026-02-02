@@ -44,13 +44,15 @@ jobs:
             pandoc "$md" \
               -o "dist/pdfs/${base}.pdf" \
               --pdf-engine=xelatex \
-              --resource-path=".:assets:pdf/styles" \
-              --include-in-header="pdf/styles/turtini-header.tex" \
-              --include-after-body="pdf/styles/force-fancy.tex" \
-              -V mainfont="DejaVu Sans" \
+              --resource-path=.:assets:pdf \
+              --include-in-header=pdf/styles/turtini-preamble.tex \
+              --include-in-header=pdf/styles/turtini-header.tex \
+              --include-before-body=pdf/styles/turtini-before-body.tex \
+              -V mainfont="DejaVu Serif" \
               -V monofont="DejaVu Sans Mono" \
               -V fontsize=11pt
-          done
+           done
+
 
           ls -la dist/pdfs
 
