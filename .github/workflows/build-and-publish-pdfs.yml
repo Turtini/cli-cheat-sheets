@@ -48,8 +48,8 @@ jobs:
               --include-in-header=pdf/styles/turtini-preamble.tex \
               --include-in-header=pdf/styles/turtini-header.tex \
               --include-before-body=pdf/styles/turtini-before-body.tex \
-              -V mainfont="DejaVu Serif" \
-              -V monofont="DejaVu Sans Mono" \
+              -V mainfont="Arimo" \
+              -V monofont="Arimo" \
               -V fontsize=11pt
            done
 
