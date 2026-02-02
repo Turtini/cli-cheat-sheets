@@ -1,0 +1,25 @@
+% pdf/styles/turtini-preamble.tex
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{geometry}
+
+\geometry{margin=1in}
+
+% Define the fancy style (but don't rely on it sticking yet)
+\fancypagestyle{turtini}{
+  \fancyhf{}
+  \setlength{\headheight}{18pt}
+
+  % Header
+  \lhead{\includegraphics[height=14pt]{assets/logo.png}}
+  \chead{\small\textcolor{gray}{CLI Cheat Sheets}}
+  \rhead{\small\textcolor{gray}{Page \thepage}}
+
+  % Footer
+  \lfoot{\small\textcolor{gray}{github.com/Turtini/cli-cheat-sheets}}
+  \rfoot{\small\textcolor{gray}{\today}}
+
+  \renewcommand{\headrulewidth}{0.3pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
