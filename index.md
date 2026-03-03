@@ -23,21 +23,3 @@ These PDFs are generated automatically via GitHub Actions and published to the T
 
 - **[README (PDF)](https://turtini.github.io/assets/cli-cheat-sheets/README.pdf)**  
   Repository overview and usage notes.
-
----
-
-## ⚙️ How this works
-
-- Source content lives in Markdown
-- PDFs are built with **Pandoc + XeLaTeX**
-- Fonts, headers, and layout are standardized
-- Publishing is fully automated via GitHub Actions
-- Output is deployed to `turtini.github.io`
-
-This mirrors enterprise documentation pipelines used in platforms like OpenShift.
-
----
-
-## 🔗 Source
-
-- Repo: https://github.com/Turtini/cli-cheat-sheets
