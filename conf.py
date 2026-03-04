@@ -8,7 +8,7 @@ from turtini_sphinx_theme import get_theme_paths
 
 
 # ---- Project metadata ----
-project = "Turtini Documentation"
+project = "CLI Cheat Sheets"
 author = "Turtini LLC"
 copyright = f"{datetime.utcnow().year}, Turtini LLC"
 
