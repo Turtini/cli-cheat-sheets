@@ -3,7 +3,7 @@
 **Printable, operator-friendly CLI references.**  
 Built for real-world operations. Maintained in the open.
 
-These PDFs are generated automatically via GitHub Actions and published to the Turtini site.
+These PDFs are generated automatically via GitHub Actions and published to the Turtini GitHub repo and docs.turtini.com.
 
 ---
 
