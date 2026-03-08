@@ -7,7 +7,7 @@ These PDFs are generated automatically via GitHub Actions and published to the T
 
 ---
 
-## 📄 Available Cheat Sheets
+## Available Cheat Sheets
 
 - **[Linux CLI Cheat Sheet](https://turtini.github.io/assets/cli-cheat-sheets/linux-cli.pdf)**  
   Essential Linux commands for daily operations in servers, containers, and bastion hosts.
